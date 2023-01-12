@@ -1,0 +1,21 @@
+<div *ngIf="oras">
+    <h2> Detalii Oras [{{oras.nume_oras}}]:</h2>
+    <div>
+        <span>Id: </span>{{oras.id}}
+    </div>
+    <div>
+        <label>Nume:
+            <input [(ngModel)]="oras.nume_oras" placeholder="Numele orasului">
+        </label>
+    </div>
+    <div>
+        <label>Numar populatie:
+            <input [(ngModel)]="oras.nr_populatie" placeholder="Numarul populatiei">
+        </label>
+    </div>
+    <div>
+        <label>Id tara din care face parte orasul
+            <input [(ngModel)]="oras.Tara_id" placeholder="Id-ul tarii mama">
+        </label>
+    </div>
+</div>>

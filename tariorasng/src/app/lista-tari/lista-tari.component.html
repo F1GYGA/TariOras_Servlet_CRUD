@@ -1,0 +1,13 @@
+<h2> Lista tarilor inregistrate</h2>
+<div *ngIf='mesajEroare'>
+    <h3>{{mesajEroare}}</h3>
+</div>
+
+<ul class="elemente_de_listat">
+    <li *ngFor="let tara of tari">
+        <a routerLink="/detalii_tara/{{tara.id}}">
+            <span class="ecuson">{{tara.id}}</span> {{tara.nume_tara}}
+        </a>
+        <button class="sterge" title="sterge tara" (click)="deleteTara(tara.id)">x</button>
+    </li>
+</ul>

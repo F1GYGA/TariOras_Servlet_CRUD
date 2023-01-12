@@ -1,0 +1,23 @@
+<div *ngIf="tara">
+    <h2> Detalii tara [{{tara.nume_tara}}]:</h2>
+    <div><span> Id: </span>{{tara.id}}</div>
+    <div>
+        <label>Nume:
+            <input [(ngModel)]="tara.nume_tara" placeholder="Numele tarii">
+        </label>
+    </div>
+    <div>
+        <label>Continent:
+            <input [(ngModel)]="tara.continent" placeholder="Numele continent">
+        </label>
+    </div>
+    <div>
+        <label>Numar populatie
+            <input [(ngModel)]="tara.nr_populatie" placeholder="Numele tarii">
+        </label>
+    </div>
+    <div>
+        <button (click)="goBack()">Inapoi</button>
+        <button (click)="updateTara(tara)">Update</button>
+    </div>
+</div>

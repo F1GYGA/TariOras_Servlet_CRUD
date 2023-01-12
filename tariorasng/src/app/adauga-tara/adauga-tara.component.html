@@ -1,0 +1,34 @@
+<div>
+    <h2>Adauga student</h2>
+    <form (ngSubmit)="adaugaTara()" #adaugaTaraForm="ngForm">
+        <div>
+            <label>Nume:
+                <input type="text" required [(ngModel)]="tara.nume_tara" id="nume_tara" name="nume_tara"
+                    #nume_tara="ngModel">
+            </label>
+            <div [hidden]="nume_tara.valid || nume_tara.pristine" class="alert">
+                Numele tarii este obligatoriu!
+            </div>
+        </div>
+
+        <div>
+            <label>Continent:
+                <input type="text" id="continent" required [(ngModel)]="tara.continent" name="continent"
+                    #continent="ngModel">
+            </label>
+            <div [hidden]="continent.valid || continent.pristine" class="alert">
+                Continentul este obligatoriu
+            </div>
+        </div>
+
+        <div>
+            <label>Populatie:
+                <input type="text" id="nr_populatie" required [(ngModel)]="tara.nr_populatie" name="nr_populatie"
+                    #nr_populatie="ngModel">
+            </label>
+            <div [hidden]="nr_populatie.valid || nr_populatie.pristine" class="alert">
+                Numarul populatiei este obligatoriu </div>
+        </div>
+        <button type="submit" [disabled]="!adaugaTaraForm.form.valid">Adauga</button>
+    </form>
+</div>
